@@ -1,0 +1,69 @@
+<div class="breadcrumb">
+    <h1>Bayi Tahsilat</h1>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card mb-4">
+            <div class="card-body">
+                <div class="card-title mb-3"></div>
+                <form [formGroup]="formBasic" (ngSubmit)="submit()">
+                    <div class="row">
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="firstName">Ödeme Miktarı</label>
+                            <input type="text" class="form-control" id="firstName" min="1" required>
+                        </div>
+                        <div class="col-md-6 form-group mb-3">
+                            <label for="firstName">Taksit</label>
+                            <input type="number" class="form-control" id="firstName" value="0" min="0" required>
+                        </div>
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="firstName">Kart üzerindeki isim</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                        </div>
+                        <div class="col-md-12 form-group mb-3">
+                            <label for="card">Kart No</label>
+                            <input class="form-control" id="card"  placeholder="9999 9999 9999 9999" required>
+                        </div>
+                        <div class="col-md-5 form-group mb-3">
+                            <label for="card">AY</label>
+                            <select class="form-control">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                            </select>
+                        </div>
+                        <div class="col-md-5 form-group mb-3">
+                            <label for="card">YIL</label>
+                            <select class="form-control">
+                                <option>Option 1</option>
+                            </select>
+                        </div>
+                        <div class="col-md-2 form-group mb-3">
+                            <label for="card">CCV</label>
+                            <input type="text" class="form-control" id="firstName" maxlength="4" required>
+                        </div>
+                        <div class="col-md-12">
+                            <button class="btn btn-primary btn-block">Sign In</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+   
+
+  
+</div>

@@ -1,0 +1,53 @@
+<div class="breadcrumb">
+  <h1>Profil Düzenleme</h1>
+</div>
+<div class="separator-breadcrumb border-top"></div>
+<div class="card o-hidden" [@animate]="{value:'*',params:{y:'120px',opacity:'0',delay:'100ms', duration: '400ms'}}">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="p-4">
+        <div *ngIf="viewMode === 'edit'">
+
+        <form  [formGroup]="profilForm" *ngIf="this.profilForm" autocomplete="on">
+          <input id="id" type="hidden" formControlName="id">
+          <div class="form-group">
+            <label for="firstname">İsim</label>
+            <input id="firstname" formControlName="firstname" class="form-control form-control-rounded" type="text">
+          </div>
+          <div class="form-group">
+            <label for="lastname">Soyisim</label>
+            <input id="lastname" formControlName="lastname" class="form-control form-control-rounded" type="text">
+          </div>
+          <div class="form-group">
+            <label for="email">Eposta Adresi</label>
+            <input id="email" formControlName="email" class="form-control form-control-rounded" type="email">
+          </div>
+          <div class="form-group">
+            <label for="password">Şifre</label>
+            <input id="password" formControlName="password" class="form-control form-control-rounded" type="text">
+            <input id="passwordold" formControlName="passwordold" class="form-control form-control-rounded" type="hidden">
+          </div>
+          <div class="form-group">
+            <label for="company">Soyisim</label>
+            <input id="company" formControlName="company" class="form-control form-control-rounded" type="text">
+          </div>
+          <div class="form-group">
+            <label for="address">Adres</label>
+            <textarea id="address" formControlName="address" class="form-control form-control-rounded"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="taxNumber">Vergi No</label>
+            <input id="taxNumber" formControlName="taxNumber" class="form-control form-control-rounded" type="text">
+          </div>
+          <div class="form-group">
+            <label for="taxOffice">Vergi Dairesi</label>
+            <input id="taxOffice" formControlName="taxOffice" class="form-control form-control-rounded" type="text">
+          </div>
+          <btn-loading btnClass="btn-primary" [loading]="loading" (click)="profilUpdate()">GÜNCELLE</btn-loading>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

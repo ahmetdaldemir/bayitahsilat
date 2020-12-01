@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/sunucu/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/codeigniter4/framework" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/mikey179/vfsstream" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/composer" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/kint-php/kint" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/laminas/laminas-zendframework-bridge" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/laminas/laminas-escaper" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/sunucu/vendor/sebastian/version" />
+    </include_path>
+  </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
+  <component name="PhpUnit">
+    <phpunit_settings>
+      <PhpUnitSettings custom_loader_path="$PROJECT_DIR$/sunucu/vendor/autoload.php" />
+    </phpunit_settings>
+  </component>
+</project>

@@ -1,0 +1,87 @@
+<div class="breadcrumb">
+    <h1>Bayi Tahsilat</h1>
+</div>
+<div class="separator-breadcrumb border-top"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4">
+            <div class="card-header"><h4 style="color: #f00;">*Sadece Kredi Kartı İle İşlem Yapılmaktadır.</h4></div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card-title mb-3"></div>
+                        <form ngNoForm  [action]="'https://tahsilat.sahbaz.com.tr/admin/payment/index'" method="POST" class="paymentWidgets" data-brands="VISA MASTER">
+                            <input type="hidden" class="form-control"  id="id_seller" name="id_seller" value="{{id_seller}}" required >
+                            <div class="row">
+                                <div class="col-md-6 form-group mb-3">
+                                    <label for="price"><b>Ödeme Miktarı</b></label>
+                                    <input type="text" class="form-control"  name="price"  id="price" min="1"  value="1"  >
+                                </div>
+                                <div class="col-md-6 form-group mb-3">
+                                    <label for="installment"><b>Taksit</b></label>
+                                    <input type="number" class="form-control" id="installment" name="installment"  value="0" min="0" max="12" required>
+                                </div>
+                                <div class="col-md-12 form-group mb-3">
+                                    <label for="name"><b>Kart üzerindeki isim</b></label>
+                                    <input type="text" class="form-control" id="name" name="name"  (keyup)="onKeyUpName($event)" required>
+                                </div>
+                                <div class="col-md-12 form-group mb-3">
+                                    <label for="Pan"><b>Kart No</b></label>
+                                    <input class="form-control" id="Pan" name="Pan"   placeholder="9999 9999 9999 9999" (keyup)="onKeyUpNumber($event)"  (focusout)="onKeyDown($event)" required>
+                                </div>
+                                <div class="col-md-4 form-group mb-3">
+                                    <label for="mounth"><b>AY</b></label>
+                                    <input type="text" class="form-control"  name="Mounth" maxlength="2"  (keyup)="onKeyUpDateMounth($event)" />
+                                </div>
+                                <div class="col-md-4 form-group mb-3">
+                                    <label for="mounth"><b>YIL - <small style="font-weight: 700;">örn: 22</small></b></label>
+                                    <input type="text" class="form-control"  name="Year" maxlength="2"  (keyup)="onKeyUpDateYear($event)" />
+                                </div>
+                                <div class="col-md-3 form-group mb-3">
+                                    <label for="Cvv2"><b>CCV</b></label>
+                                    <input type="text" class="form-control" id="Cvv2" name="Cvv2"   (keyup)="onKeyUpCcv($event)"   maxlength="4" required>
+                                </div>
+                                <div class="col-md-12">
+                                    <button class="btn btn-primary btn-block">Ödeme Yap</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-md-8 d-none d-sm-block">
+
+                             <div class="card-back">
+                                <div class="card-view-strip"></div>
+                                <div class="card-view-signature">
+                                    <div class="card-view-signature-title">İmza</div>
+                                    <div class="card-view-signature-strip">
+                                        <div class="card-view-csc">
+                                            <div id="Card-View-CSC">{{cardCcv}}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-front">
+                                <div class="card-view-bank">{{bankName}}</div>
+                                <div id="Card-View-Number" class="card-view-number">{{cardNumber}}</div>
+                                <div class="card-view-expiry">
+                                    <div class="card-view-expiry-subtitle">Son Kullanma</div>
+                                    <div id="Card-View-Expiry" class="card-view-expiry-date">{{cardDateMounth}} {{cardDateYear}}</div>
+                                    <div class="card-view-expiry-slash">/</div>
+                                </div>
+                                <div id="Card-View-Name" class="card-view-name">{{cardName}}</div>
+                                <div class="card-view-logo">
+                                <div style = "{{myStylesMaster}}" id="mastercard" class="mastercard-logo"></div>
+                                <div style = "{{myStylesVisa}}" id="visa" class="visa-logo"></div>
+                                <div style = "{{myStylesAmex}}" id="amex" class="amex-logo"></div>
+                                </div>
+                            </div>
+ 
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <img src="assets/images/pratix65-bankakartlari.png">
+
+</div>

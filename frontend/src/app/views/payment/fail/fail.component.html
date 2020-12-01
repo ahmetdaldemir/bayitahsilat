@@ -1,0 +1,20 @@
+<div class="breadcrumb">
+    <h1>Başarısız Ödeme</h1>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+<div class="row">
+    <div class="col-md-12">
+        <div class="card mb-4 cardWidth">
+            <div class="card-body" *ngFor="let value of invoices;">
+                <img src="assets/images/fail.png">
+                <h2 style="    margin: 30px 0;">Ödeme Başarısız</h2>
+                <h2 style="    margin: 30px 0;">{{value.amount}} TL</h2>
+                <h3 style="    margin: 30px 0;">{{value.status}}</h3>
+                <h3 style="    margin: 30px 0;">İşlem Referans Kodu : {{value.id_order}}</h3>
+                <h5 style="    margin: 30px 0;">{{value.date_add}}</h5>
+            </div>
+        </div>
+    </div>
+</div>
+            

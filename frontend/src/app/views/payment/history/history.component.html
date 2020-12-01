@@ -1,0 +1,62 @@
+<div class="breadcrumb">
+    <h1>Geçmiş Tahsilatlar</h1>
+    <ul>
+        <li><a href="">Bayi Paneli</a></li>
+        <li>Geçmiş Tahsilatlar</li>
+    </ul>
+</div>
+
+<div class="separator-breadcrumb border-top"></div>
+
+<div class="row mb-3">
+    <div class="col-md-12">
+        <div class="card o-hidden">
+            <ngx-datatable *ngIf="invoices?.length" style="box-shadow: none" class="material fullscreen" [style.height]="60*invoices.length+60+'px'" [columnMode]="'force'"
+                [headerHeight]="50" [footerHeight]="0" [rowHeight]="60" [scrollbarV]="true" [scrollbarH]="true" [rows]="invoices">
+                <ngx-datatable-column name="photo" [maxWidth]="100">
+                    <ng-template ngx-datatable-header-template>
+                        Sıra No
+                    </ng-template>
+                    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                        {{row.id}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column>
+                    <ng-template ngx-datatable-header-template>
+                        İşlem Referans No
+                    </ng-template>
+                    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                        {{row.id_order}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column>
+                    <ng-template ngx-datatable-header-template>
+                        Kart No
+                    </ng-template>
+                    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                        {{row.card_mask}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column>
+                    <ng-template ngx-datatable-header-template>
+                        Miktar
+                    </ng-template>
+                    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                        {{row.amount}}
+                    </ng-template>
+                </ngx-datatable-column>
+                <ngx-datatable-column [flexGrow]="1">
+                    <ng-template ngx-datatable-header-template>
+                        Durum
+                    </ng-template>
+                    <ng-template ngx-datatable-cell-template let-value="value" let-row="row">
+                        <span *ngIf ="row.paymentStatus == 00">Ödemeniz Onaylandı</span>
+                        <span *ngIf ="row.paymentStatus != 00">Başarısız</span>
+                    </ng-template>
+                </ngx-datatable-column>
+               
+            </ngx-datatable>
+        </div>
+    </div>
+</div>
+ 
